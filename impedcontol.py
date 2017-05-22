@@ -110,7 +110,7 @@ class JointSprings(object):
 
         jac = self._rKin.jacobian() #jacobian matrix
         #print "force senser information"
-        self._Torque = Fe * jac  #change force into torque
+        self._Torque = jac.T * Fe  #change force into torque
         #print self._Torque
 
 
